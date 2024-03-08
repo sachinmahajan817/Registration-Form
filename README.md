@@ -1,27 +1,56 @@
-# Registration
+# Registration Form Using Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+Registration-Form is a simple component for validating different input types.
 
-## Development server
+In this form I have taken most of the input fields and I have performed all validations for each and every field. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Output Format
+ 
+ <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img alt="Registration-Form" src="/finalImg.png" class="img-responsive">
+ </p>
 
-## Code scaffolding
+**To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-ichuxh.stackblitz.io)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Using the project
 
-## Build
+Download the Registration folder and install the required packages and run the application. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Installing
 
-## Running unit tests
+```
+> npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Run server
 
-## Running end-to-end tests
+```
+> ng serve
+```
+ 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Input Fields for which I have done validations are
 
-## Further help
+name,userid,password,confirm password,Date of Birth,gender,country,address,pincode,mobile number and email address.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Working process
+
+For each field, if user enters invalid input it shows error message 
+
+#### Validation for submit button
+After entering all the values still if user is entering any wrong inputs then submit button will be disabled, If everything is correct then only user will be allowed to submit this form,In case of success "Success" message will be shown to user.
+
+## @Output Decorator
+@Output has been used to provide user with required output.For this I have used EventEmitter, whenever some event will be called user will get result.
+```
+   ngSubmit=function(userList){
+   
+     this.getobject.emit(userList)
+     
+   }
+   
+ ```
+   
+Using this method user can get complete user details on the console in form of an array.
+
+
